@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Most Common Memorable Characteristics of a Chocolate Bar",
+    "data": {
+        "url": "horizontal-bar-chart/characteristic_count.csv"
+    },
+    "encoding": {
+        "y": {"field": "characteristic", "type": "nominal", "sort": "-x", "title": null},
+        "x": {"field": "count", "type": "quantitative", "title": null}
+    },
+    "layer": [{
+        "mark": "bar",
+        "encoding": {
+            "color": {
+                "field": "count",
+                "type": "quantitative",
+                "title": "No. of Chocolate Bars"
+            }
+        }
+    }, 
+    {
+        "mark": {
+            "type": "text",
+            "align": "right",
+            "xOffset": -4,
+            "aria": false
+        },
+        "encoding": {
+            "text": {"field": "count", "type": "quantitative"},
+            "color": {
+                "condition": {
+                    "test": {"field": "count", "gt": 200},
+                    "value": "white"
+                },
+                "value": "black"
+            }
+        }
+    }]
+}

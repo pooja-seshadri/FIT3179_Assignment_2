@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Cocoa Percentage and their Average Ratings by Year" },
+    "width": 500,
+    "height": 300,
+    "data": {
+        "url": "scatter-plot/cocoa_percent_year_rating.csv"
+    },
+    "params": [{
+        "name": "year_selection",
+        "bind": {
+            "input": "select",
+            "options": [
+                "null",
+                "2006",
+                "2007",
+                "2008",
+                "2009",
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021"
+            ],
+            "labels": [
+                "None",
+                "2006",
+                "2007",
+                "2008",
+                "2009",
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021"
+            ],
+            "name": "Select Year of Review: "
+        }
+    }],
+    "transform": [{
+        "filter": "datum.year == null || datum.year == year_selection"
+    }],
+    "layer": [{
+        "mark": "point",
+        "encoding": {
+            "x": {"field": "cocoa_percent", "type": "quantitative", "title": "Percentage of Cocoa Content in Chocolate Bar (%)"},
+            "y": {"field": "rating", "title": "Average Rating", "type": "quantitative"},
+            "tooltip": [
+                {"field": "cocoa_percent", "type": "quantitative", "title": "Cocoa Percentage"},
+                {"field": "rating", "type": "quantitative", "title": "Average rating"},
+                {"field": "year", "type": "nominal", "title": "Year Reviewed"}
+            ]
+        }
+    }, {
+        "mark": "rule",
+        "encoding": {
+            "y": {"datum": 3.5}
+        }
+    }, {
+        "mark": "rule",
+        "encoding": {
+            "x": {"datum": 0}
+        }
+    }, {
+        "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "bottom",
+            "dx": 40,
+            "dy": -120,
+            "text": "Chocolate flavours with a rating above 3.5 are highly recommended"
+        }
+    }]
+}
