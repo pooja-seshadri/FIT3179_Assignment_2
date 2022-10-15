@@ -1,13 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Top 10 Countries with the Most Chocolate Bar Manufacturers",
+    "width": 300,
     "data": {
         "url": "bar-chart/country_manufacturer_data.csv"
     },
     "mark": "bar",
     "encoding": {
-        "x": {"field": "country", "type": "nominal", "title": "Country"},
-        "y": {"field": "manufacturer_count", "type": "quantitative", "title": "Number of Chocolate Bar Manufacturers"},
+        "x": {"field": "country", "type": "nominal", "title": "Country", "sort": ["U.S.A.", "Canada", "U.K.", "France", "Ecuador", "Belgium", "Italy", "Australia", "Japan", "Peru"]},
+        "y": {"field": "manufacturer_count", "type": "quantitative", "title": "Number of Manufacturers"},
         "tooltip": [
             {"field": "country", "type": "nominal", "title": "Country"},
             {"field": "manufacturer_count", "type": "quantitative", "title": "Number of Manufacturers"}

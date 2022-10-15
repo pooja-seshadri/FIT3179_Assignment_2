@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Most Common Memorable Characteristics of a Chocolate Bar",
+    "width": 300,
     "data": {
         "url": "horizontal-bar-chart/characteristic_count.csv"
     },
