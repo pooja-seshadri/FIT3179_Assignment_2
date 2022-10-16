@@ -2,6 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 290,
     "height": 300,
+    "background": "#c69a72",
     "data": {
         "url": "scatter-plot/cocoa_percent_year_rating.csv"
     },
@@ -10,7 +11,6 @@
         "bind": {
             "input": "select",
             "options": [
-                "null",
                 "2006",
                 "2007",
                 "2008",
@@ -29,7 +29,6 @@
                 "2021"
             ],
             "labels": [
-                "None",
                 "2006",
                 "2007",
                 "2008",
@@ -51,16 +50,19 @@
         }
     }],
     "transform": [{
-        "filter": "datum.year == null || datum.year == year_selection"
+        "filter": "datum.year == year_selection"
     }],
     "layer": [{
-        "mark": "point",
+        "mark": {
+            "type": "point",
+            "stroke": "#2e1224"
+        },
         "encoding": {
             "x": {"field": "cocoa_percent", "type": "quantitative", "title": "Percentage of Cocoa Content in Chocolate Bar (%)", "scale": {"domain": [40, 105]}},
             "y": {"field": "rating", "title": "Average Rating", "type": "quantitative", "scale": {"domain": [0, 5.0]}},
             "tooltip": [
                 {"field": "cocoa_percent", "type": "quantitative", "title": "Cocoa Percentage"},
-                {"field": "rating", "type": "quantitative", "title": "Average rating"},
+                {"field": "rating", "type": "quantitative", "title": "Average rating", "format": ".3s"},
                 {"field": "year", "type": "nominal", "title": "Year Reviewed"}
             ]
         }
@@ -79,9 +81,9 @@
             "type": "text",
             "align": "right",
             "baseline": "bottom",
-            "dx": 40,
-            "dy": -120,
-            "text": "Chocolate flavours with a rating above 3.5 are highly recommended"
+            "dx": 140,
+            "dy": -100,
+            "text": "Bars with a rating above 3.5 are highly recommended"
         }
     }]
 }

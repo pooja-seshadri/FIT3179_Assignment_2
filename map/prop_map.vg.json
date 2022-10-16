@@ -2,6 +2,12 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 680,
     "height": 450,
+    "background": "#c69a72",
+    "config": {
+        "view": {
+           "stroke": "transparent"
+        }
+      },
     "projection": {
         "type": "equalEarth"
     },
@@ -22,6 +28,19 @@
         },
         {
             "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "oceans"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "skyblue"
+            }
+        },
+        {
+            "data": {
                 "url": "map/ne_110m_1.json",
                 "format": {
                     "type": "topojson",
@@ -33,23 +52,46 @@
                 "fill": null,
                 "stroke": "lightgray"
             }
-        },     
+        },
         {
             "data": {
                 "url": "map/bean_origin_data_count.csv"
             },
-            "mark": {"type": "circle"},
+            "mark": {
+                "type": "circle",
+                "fill": "#2e1224"
+            },
             "encoding": {
-                "longitude": {"field": "longitude", "type": "quantitative"},
-                "latitude": {"field": "latitude", "type": "quantitative"},
+                "longitude": {
+                    "field": "longitude",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "latitude",
+                    "type": "quantitative"
+                },
                 "size": {
                     "field": "count",
                     "type": "quantitative",
-                    "scale": {"domain": [1, 260]},
+                    "scale": {
+                        "domain": [
+                            1,
+                            260
+                        ]
+                    },
                     "title": "Count"
                 },
-                "tooltip": [{"field": "bean_origin", "type": "nominal", "title": "Country of Origin"}, 
-                {"field": "count", "type": "quantitative", "title": "Number of Bean Origins"}
+                "tooltip": [
+                    {
+                        "field": "bean_origin",
+                        "type": "nominal",
+                        "title": "Country of Origin"
+                    },
+                    {
+                        "field": "count",
+                        "type": "quantitative",
+                        "title": "Number of Bean Origins"
+                    }
                 ]
             }
         }

@@ -1,10 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 300,
+    "background": "#c69a72",
     "data": {
         "url": "bar-chart/country_manufacturer_data.csv"
     },
-    "mark": "bar",
+    "mark": {
+        "type": "bar",
+        "fill": "#2e1224"
+    },
     "encoding": {
         "x": {"field": "country", "type": "nominal", "title": "Country", "sort": ["U.S.A.", "Canada", "U.K.", "France", "Ecuador", "Belgium", "Italy", "Australia", "Japan", "Peru"]},
         "y": {"field": "manufacturer_count", "type": "quantitative", "title": "Number of Manufacturers"},

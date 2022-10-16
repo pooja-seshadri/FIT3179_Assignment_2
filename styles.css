@@ -7,21 +7,21 @@ h1 {
     font-weight: 400;
     font-size: 43px;
     padding: 50px;
-    background-color: #5F4842;
-    color: #ffe9c9;
+    color: white;
     text-align: center;
-    letter-spacing: 2px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background-color: #2e1224;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 body {
     background-color: lightgray;
+    /* background-i mage: url('icons/choc_bg.png'); */
 }
 
 .page {
     width: 850px;
-    background-color: white;
+    background-color: #c69a72;
     margin: auto;
 }
 
@@ -55,12 +55,20 @@ h1 {
 }
 
 .description-paragraph {
-    padding: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
     padding-top: 20px;
-}
-
-.description-div {
-    background-color: #ffe9c9;
+    padding-bottom: 25px;
+    /* background-color: #c69a72; */
+    /* border-color: #c69a72; */
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -10px;
+    border-radius: 50px;
+    color: #2e1224;
+    font-size: large;
+    line-height: normal;
+    font-weight: lighter;
 }
 
 p {
@@ -74,4 +82,33 @@ p {
 
 .vega-embed summary {
     display: none;
+}
+
+.highlight-desc-text {
+    font-weight: 1000;
+    font-size: larger;
+    color: #140810;
+}
+
+.map-div {
+    margin-top: -50px;
+}
+
+.heading-left {
+    margin-left: 70px !important;
+    background-color: #2e1224;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.heading-right {
+    margin-right: 70px !important;
+    background-color: #2e1224;
+    color: white;
+    padding: 20px;
+    text-align: end;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
