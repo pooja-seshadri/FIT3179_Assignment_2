@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 290,
+    "width": 295,
     "height": 300,
     "background": "#c69a72",
     "data": {
@@ -74,18 +74,14 @@
             "y": {"datum": 3.5}
         }
     }, {
-        "mark": "rule",
-        "encoding": {
-            "x": {"datum": 0}
-        }
-    }, {
         "mark": {
             "type": "text",
             "align": "right",
             "baseline": "bottom",
-            "dx": 140,
+            "dx": 143,
             "dy": -100,
-            "text": "Bars with a rating above 3.5 are highly recommended"
+            "text": "Bars with a rating above 3.5 are highly recommended",
+            "fontSize": 12
         }
     }]
 }

@@ -1,17 +1,19 @@
 body *{
     font-family: 'Open Sans', sans-serif;
+    color: #2e1224;
 }
 
 h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lobster';
     font-weight: 400;
-    font-size: 43px;
+    font-size: 72px;
     padding: 50px;
     color: white;
     text-align: center;
     background-color: #2e1224;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    letter-spacing: 2px;
 }
 
 body {
@@ -23,6 +25,7 @@ body {
     width: 850px;
     background-color: #c69a72;
     margin: auto;
+    padding-bottom: 5px;
 }
 
 .vis-container {
@@ -59,8 +62,6 @@ h1 {
     padding-right: 70px;
     padding-top: 20px;
     padding-bottom: 25px;
-    /* background-color: #c69a72; */
-    /* border-color: #c69a72; */
     margin-left: 50px;
     margin-right: 50px;
     margin-top: -10px;
@@ -95,6 +96,8 @@ p {
 }
 
 .heading-left {
+    font-family: 'Lobster';
+    font-size: 25px;
     margin-left: 70px !important;
     background-color: #2e1224;
     color: white;
@@ -104,6 +107,8 @@ p {
 }
 
 .heading-right {
+    font-family: 'Lobster';
+    font-size: 25px;
     margin-right: 70px !important;
     background-color: #2e1224;
     color: white;
@@ -111,4 +116,21 @@ p {
     text-align: end;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.p-map {
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+.highlight-p-text {
+    color: #140810;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.img-left-head {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
 }

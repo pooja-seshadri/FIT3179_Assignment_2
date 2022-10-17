@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 290,
+    "height": 300,
+    "background": "#c69a72",
+    "data": {
+        "url": "scatter-plot-slider/cocoa_percent_year_rating.csv"
+    },
+    "params": [{
+        "name": "year_s
+    }]
+}
