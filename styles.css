@@ -1,6 +1,7 @@
 body *{
     font-family: 'Open Sans', sans-serif;
     color: #2e1224;
+    line-height: normal;
 }
 
 h1 {
@@ -18,7 +19,6 @@ h1 {
 
 body {
     background-color: lightgray;
-    /* background-i mage: url('icons/choc_bg.png'); */
 }
 
 .page {
